@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HopeHub</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/profile_dropdown.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-logo">
+            <img src="static/images/logo.png" alt="HopeHub Logo">
+            <span>HopeHub</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="user_dashboard.html">Dashboard</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Search...">
+            </li>
+
+            <!-- {% if user.is_authenticated %}
+                <li><a href="user_dashboard.html">Dashboard</a></li>
+                {% include 'profile_dropdown.html' %}
+            {% else %}
+                <li><a href="login.html">Login</a></li>
+            {% endif %} -->
+        </ul>
+    </nav>
+
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="{% url 'login' %}" method="POST">
+            
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 HopeHub. All rights reserved.
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
