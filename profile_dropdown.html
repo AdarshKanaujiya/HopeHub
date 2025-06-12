@@ -28,13 +28,13 @@
     function toggleDropdown(e) {
         e.preventDefault();
         var menu = document.getElementById('profile-dropdown');
-        menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+        menu.styles.display = (menu.styles.display === 'none' || menu.styles.display === '') ? 'block' : 'none';
     }
 
     document.addEventListener('click', function(event) {
         var dropdown = document.getElementById('profile-dropdown');
         if (dropdown && !event.target.closest('.dropdown')) {
-            dropdown.style.display = 'none';
+            dropdown.styles.display = 'none';
         }
     });
   
